@@ -2,8 +2,8 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-myColors = ((53/255, 96/255, 149/255, 1.0), (1.0, 1.0, 1.0, 1.0), (167/255, 56/255, 44/255, 1.0))
-cmap = LinearSegmentedColormap.from_list('Custom', myColors, len(myColors))
+#myColors = ((53/255, 96/255, 149/255, 1.0), (1.0, 1.0, 1.0, 1.0), (167/255, 56/255, 44/255, 1.0))
+#cmap = LinearSegmentedColormap.from_list('Custom', myColors, len(myColors))
 
 # a function for calculating adjusted p-values according to Benjamini-Hochberg procedure
 # could install statsmodels and use statsmodels.stats.multitest instead
@@ -30,7 +30,7 @@ def bh(pvalues):
 
 def make_plot(df, enrichment_folder, file_name):
     ax1 = sns.heatmap(df, 
-                cmap=cmap, 
+                #cmap=cmap, 
                 vmin=-1,
                 vmax=1,
                 yticklabels=True, 
